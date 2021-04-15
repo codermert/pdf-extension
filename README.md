@@ -1,6 +1,7 @@
 [![forthebadge made-with-javascript](http://ForTheBadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/codermert)
-![Repo Boyutu](https://img.shields.io/github/repo-size/codermert/pdf-extension)
+[![ForTheBadge built-with-love](https://img.shields.io/badge/ask.fm-2B2A29.svg?style=for-the-badge&logo=askfm&logoColor=ee1144)](https://ask.fm/codermertx)
+
 
 Word dosyalarınızı aynen Office yazılımındaki gibi görünmesi için dönüştürün. DOCX formatından PDF oluşturmak hiç bu kadar kolay olmamıştı!
 
