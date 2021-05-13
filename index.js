@@ -1,3 +1,26 @@
-// ConvertAPI JavaScript library example
-// Coder Mert 
-const _0x114f=['files','pdf','convert','documentElement','getElementById','default','1907781dDYmle','DXgceR2Du4JxDWYP','107FRULAW','innerText','docx','1606574MfhflC','add','1093948gfJrYA','setAttribute','cursor','result','132586SwAIbt','display','Url','change','style','wait','addEventListener','file','531321cZFlPj','auth','612156ermsMb','fileInput','createParams','none','currentTarget','resultLink','13967QtjpZf'];const _0xbdb6=_0x19d3;(function(_0x32fffb,_0x238359){const _0x4e684a=_0x19d3;while(!![]){try{const _0x4f9754=-parseInt(_0x4e684a(0x12f))+parseInt(_0x4e684a(0x129))+-parseInt(_0x4e684a(0x137))+-parseInt(_0x4e684a(0x12b))+parseInt(_0x4e684a(0x139))+-parseInt(_0x4e684a(0x126))*parseInt(_0x4e684a(0x11d))+parseInt(_0x4e684a(0x124));if(_0x4f9754===_0x238359)break;else _0x32fffb['push'](_0x32fffb['shift']());}catch(_0x550150){_0x32fffb['push'](_0x32fffb['shift']());}}}(_0x114f,0xd56cb));function _0x19d3(_0x128a43,_0x158640){_0x128a43=_0x128a43-0x119;let _0x114fce=_0x114f[_0x128a43];return _0x114fce;}let convertApi=ConvertApi[_0xbdb6(0x138)]({'secret':_0xbdb6(0x125)}),elResult=document[_0xbdb6(0x122)](_0xbdb6(0x12e)),elResultLink=document[_0xbdb6(0x122)](_0xbdb6(0x11c));elResult[_0xbdb6(0x133)]['display']='none',document[_0xbdb6(0x122)](_0xbdb6(0x13a))[_0xbdb6(0x135)](_0xbdb6(0x132),async _0x3f78e2=>{const _0xec5260=_0xbdb6;elResult['style'][_0xec5260(0x130)]=_0xec5260(0x11a),document[_0xec5260(0x121)][_0xec5260(0x133)][_0xec5260(0x12d)]=_0xec5260(0x134);try{let _0x360971=convertApi[_0xec5260(0x119)]();_0x360971[_0xec5260(0x12a)](_0xec5260(0x136),_0x3f78e2[_0xec5260(0x11b)]['files'][0x0]);let _0x3f9886=await convertApi[_0xec5260(0x120)](_0xec5260(0x128),_0xec5260(0x11f),_0x360971);elResultLink[_0xec5260(0x12c)]('href',_0x3f9886[_0xec5260(0x11e)][0x0][_0xec5260(0x131)]),elResultLink[_0xec5260(0x127)]=_0x3f9886['files'][0x0]['Url'],elResult[_0xec5260(0x133)][_0xec5260(0x130)]='block';}finally{document[_0xec5260(0x121)][_0xec5260(0x133)][_0xec5260(0x12d)]=_0xec5260(0x123);}});
+
+let convertApi = ConvertApi.auth({secret: 'A6S6UAckH9n4I7ug'})
+let elResult = document.getElementById('result')
+let elResultLink = document.getElementById('resultLink')
+elResult.style.display = 'none'
+
+
+document.getElementById('fileInput').addEventListener('change', async e => {
+    elResult.style.display = 'none'
+    document.documentElement.style.cursor = 'wait'
+    try {
+
+        // Converting DOCX to PDF file
+        let params = convertApi.createParams()
+        params.add('file', e.currentTarget.files[0])
+        let result = await convertApi.convert('docx', 'pdf', params)
+
+        // Showing link with the result file
+        elResultLink.setAttribute('href', result.files[0].Url)
+        elResultLink.innerText = result.files[0].Url
+        elResult.style.display = 'block'
+
+    } finally {
+        document.documentElement.style.cursor = 'default'
+    }
+})
