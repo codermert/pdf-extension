@@ -1,5 +1,5 @@
 
-let convertApi = ConvertApi.auth({secret: 'A6S6UAckH9n4I7ug'})
+let convertApi = ConvertApi.auth({secret: 'ibJ0nVy3yPCon5QX'})
 let elResult = document.getElementById('result')
 let elResultLink = document.getElementById('resultLink')
 elResult.style.display = 'none'
